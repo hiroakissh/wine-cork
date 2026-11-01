@@ -3,17 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0378125F907165D4340D85F9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE464C9C17B2E64C15AC23C1 /* RootView.swift */; };
 		12651373317E8519D8169008 /* CorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71C113F60396A387AFBB59 /* CorkApp.swift */; };
 		333A3DCB7E8B3C7217F13E01 /* WineDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFC1A0453030ED37DC4B2F0 /* WineDomainTests.swift */; };
+		33B196651D0C76765B3EAACC /* StoreBootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A8B5D80EA668E24DFCCDB /* StoreBootstrapTests.swift */; };
 		3C8EDCB9B63E126CA4DA6324 /* CellarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BFDDD3D171AB7D6FE6CA0D /* CellarStore.swift */; };
 		401A970C2039555857A6F696 /* CorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C183DE8D3A1CD84D53557F /* CorkUITests.swift */; };
 		467DF6391C6EEE01BB14055D /* VisionAdapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1C51EB9EBEEC8395321C9 /* VisionAdapters.swift */; };
 		6D0212CE1BCF13667461F3F6 /* BottlePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA509804AAF3144FB50AAEEC /* BottlePreviewView.swift */; };
+		6F7845F124C0BF31CEB006A1 /* StoreBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1138A66E87CA5B8C45A4C879 /* StoreBootstrap.swift */; };
 		A32C82BE3BA81DCE17E2AA80 /* CellarArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A031712D4364F32F68BF70 /* CellarArchive.swift */; };
 		ADE62C0DF6F572E1E2BA0138 /* QuadEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D18CBD0878A61CA158933 /* QuadEditorView.swift */; };
 		B642E73D3A97D5ABB21507F8 /* WineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44FD677A078EAB38F5C0BA /* WineDetailView.swift */; };
@@ -26,6 +28,7 @@
 		EB0459A88218C24B312F2362 /* RecognitionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567C67BA22A9FE892BF87FF /* RecognitionTypes.swift */; };
 		EE67C8B305935938290E5353 /* AddWineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD081CCE2DFBB23D490907C /* AddWineView.swift */; };
 		F035CD292F226870E8E6329F /* TastingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BACBDC39F83C296DDDE642 /* TastingFormView.swift */; };
+		F6FA6D5030E3D95C4C6EBE5F /* StorageRecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D337E4A190A8F8E5F701C5A5 /* StorageRecoveryView.swift */; };
 		F8549601135BAC54E4868637 /* VisionSubjectPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3D109FA816D0E4EEFEFFD4 /* VisionSubjectPickerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +52,9 @@
 /* Begin PBXFileReference section */
 		017D18CBD0878A61CA158933 /* QuadEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadEditorView.swift; sourceTree = "<group>"; };
 		0F2101B2291BF364C3166FD5 /* WineDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDomain.swift; sourceTree = "<group>"; };
+		1138A66E87CA5B8C45A4C879 /* StoreBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBootstrap.swift; sourceTree = "<group>"; };
 		129839B1BDA480ADD2246A68 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
-		21B4D303025A328D8A5F043B /* Cork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21B4D303025A328D8A5F043B /* Cork.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Cork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A38CFC19C6736B5599AA3FA /* CellarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarRepository.swift; sourceTree = "<group>"; };
 		41341A270EB7BC0F2BE219C6 /* ImageNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNormalizer.swift; sourceTree = "<group>"; };
 		43A031712D4364F32F68BF70 /* CellarArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarArchive.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		8F3D109FA816D0E4EEFEFFD4 /* VisionSubjectPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionSubjectPickerView.swift; sourceTree = "<group>"; };
 		A567C67BA22A9FE892BF87FF /* RecognitionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionTypes.swift; sourceTree = "<group>"; };
 		AB44FD677A078EAB38F5C0BA /* WineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailView.swift; sourceTree = "<group>"; };
+		D10A8B5D80EA668E24DFCCDB /* StoreBootstrapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBootstrapTests.swift; sourceTree = "<group>"; };
+		D337E4A190A8F8E5F701C5A5 /* StorageRecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRecoveryView.swift; sourceTree = "<group>"; };
 		D5B1C51EB9EBEEC8395321C9 /* VisionAdapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAdapters.swift; sourceTree = "<group>"; };
 		DA71C113F60396A387AFBB59 /* CorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorkApp.swift; sourceTree = "<group>"; };
 		E8BACBDC39F83C296DDDE642 /* TastingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingFormView.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 			children = (
 				53BFDDD3D171AB7D6FE6CA0D /* CellarStore.swift */,
 				DA71C113F60396A387AFBB59 /* CorkApp.swift */,
+				1138A66E87CA5B8C45A4C879 /* StoreBootstrap.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -148,6 +155,7 @@
 				FA509804AAF3144FB50AAEEC /* BottlePreviewView.swift */,
 				017D18CBD0878A61CA158933 /* QuadEditorView.swift */,
 				EE464C9C17B2E64C15AC23C1 /* RootView.swift */,
+				D337E4A190A8F8E5F701C5A5 /* StorageRecoveryView.swift */,
 				E8BACBDC39F83C296DDDE642 /* TastingFormView.swift */,
 				8F3D109FA816D0E4EEFEFFD4 /* VisionSubjectPickerView.swift */,
 				AB44FD677A078EAB38F5C0BA /* WineDetailView.swift */,
@@ -169,6 +177,7 @@
 		B743A800B1B9A32849D75468 /* CorkTests */ = {
 			isa = PBXGroup;
 			children = (
+				D10A8B5D80EA668E24DFCCDB /* StoreBootstrapTests.swift */,
 				7EFC1A0453030ED37DC4B2F0 /* WineDomainTests.swift */,
 			);
 			path = CorkTests;
@@ -245,6 +254,9 @@
 					663079A103AFEA377DDE7083 = {
 						DevelopmentTeam = "";
 					};
+					CD7F2F9E4CBEF4FC9BB05402 = {
+						DevelopmentTeam = "";
+					};
 					EF72A64878EBB617F5D56036 = {
 						DevelopmentTeam = "";
 						TestTargetID = CD7F2F9E4CBEF4FC9BB05402;
@@ -305,6 +317,8 @@
 				ADE62C0DF6F572E1E2BA0138 /* QuadEditorView.swift in Sources */,
 				EB0459A88218C24B312F2362 /* RecognitionTypes.swift in Sources */,
 				0378125F907165D4340D85F9 /* RootView.swift in Sources */,
+				F6FA6D5030E3D95C4C6EBE5F /* StorageRecoveryView.swift in Sources */,
+				6F7845F124C0BF31CEB006A1 /* StoreBootstrap.swift in Sources */,
 				E03EE343B635AC4D803955F9 /* SwiftDataModels.swift in Sources */,
 				F035CD292F226870E8E6329F /* TastingFormView.swift in Sources */,
 				467DF6391C6EEE01BB14055D /* VisionAdapters.swift in Sources */,
@@ -318,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B196651D0C76765B3EAACC /* StoreBootstrapTests.swift in Sources */,
 				333A3DCB7E8B3C7217F13E01 /* WineDomainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +376,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = X5LBWH4CYQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Cork;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ワインボトルを撮影して登録するためにカメラを使用します。";
@@ -495,7 +509,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = X5LBWH4CYQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Cork;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ワインボトルを撮影して登録するためにカメラを使用します。";
