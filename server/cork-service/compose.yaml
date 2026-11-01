@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: cork
+      POSTGRES_PASSWORD: cork-local
+      POSTGRES_DB: cork
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - cork-postgres:/var/lib/postgresql/data
+volumes:
+  cork-postgres:

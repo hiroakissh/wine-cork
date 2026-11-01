@@ -40,6 +40,16 @@ open Cork.xcodeproj
 
 Foundation Models、Precision Scan、Discover / Recommendation、専用USDZ資産は後続フェーズです。
 
+## ChatGPT連携
+
+ChatGPTへCork用MCPサーバーを追加し、在庫の検索・登録・開栓/飲了・テイスティング・ペアリングを操作する連携を実装しています。
+
+- [実装計画書](docs/chatgpt-integration-plan.md)
+- [MCPサーバーの起動・OAuth・ChatGPTへの登録](server/cork-service/README.md)
+- [iOSとサーバー間の同期契約](contracts/sync-v1.md)
+
+サーバーは外部OAuth基盤とPostgreSQLを使用します。実アカウントへの接続とHTTPS公開には環境設定が必要です。画像・購入価格・OCR情報はクラウドへ送信しません。
+
 ## 検証
 
 ```sh
