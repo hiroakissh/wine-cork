@@ -7,7 +7,7 @@ struct RootView: View {
 
     var body: some View {
         ZStack {
-            Color(uiColor: .systemBackground)
+            Color("CellarBackground")
                 .ignoresSafeArea()
 
             TabView {
@@ -45,6 +45,7 @@ struct CellarView: View {
                     } actions: {
                         Button("ワインを登録") { showingAdd = true }
                             .buttonStyle(.borderedProminent)
+                            .foregroundStyle(Color("OnAccent"))
                     }
                 } else {
                     List {
@@ -52,14 +53,18 @@ struct CellarView: View {
                             NavigationLink(value: entry) {
                                 CellarRow(store: store, entry: entry)
                             }
+                            .listRowBackground(Color("CellarSurface"))
                         }
                         .onDelete { offsets in
                             offsets.map { store.entries[$0].id }.forEach(store.delete)
                         }
                     }
                     .listStyle(.insetGrouped)
+                    .scrollContentBackground(.hidden)
+                    .background(Color("CellarBackground"))
                 }
             }
+            .background(Color("CellarBackground"))
             .navigationTitle("Cellar")
             .navigationDestination(for: CellarEntry.self) { entry in
                 WineDetailView(store: store, entry: entry)
@@ -168,8 +173,10 @@ struct ScanView: View {
         NavigationStack {
             VStack(spacing: 24) {
                 Image(systemName: "camera.viewfinder")
-                    .font(.system(size: 64))
+                    .font(.system(size: 44, weight: .light))
                     .foregroundStyle(Color.accentColor)
+                    .frame(width: 112, height: 112)
+                    .background(Color.accentColor.opacity(0.10), in: RoundedRectangle(cornerRadius: 30))
                 Text("ボトルをスキャン")
                     .font(.title2.bold())
                 Text("写真を選択して、ラベル情報を確認しながらCellarへ登録します。")
@@ -177,10 +184,12 @@ struct ScanView: View {
                     .foregroundStyle(.secondary)
                 Button("スキャンを開始") { showingAdd = true }
                     .buttonStyle(.borderedProminent)
+                    .foregroundStyle(Color("OnAccent"))
                     .controlSize(.large)
             }
             .padding(32)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("CellarBackground"))
             .navigationTitle("Scan")
             .sheet(isPresented: $showingAdd) {
                 AddWineView(store: store)
@@ -246,6 +255,8 @@ struct TasteProfileView: View {
                     }
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(Color("CellarBackground"))
             .navigationTitle("Taste Profile")
             .onAppear { store.refresh() }
         }
@@ -305,6 +316,8 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(Color("CellarBackground"))
             .navigationTitle("Settings")
         }
         .fileExporter(
