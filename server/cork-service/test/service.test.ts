@@ -73,6 +73,16 @@ test("private local fields are never accepted by the cloud contract", () => {
   assert.equal(bottleSchema.safeParse({ ...bottle(), ocrRawText: "Private" }).success, false);
 });
 
+test("iOS aggregate replacement is versioned and cannot change identity", async t => {
+  const db = await database(); t.after(() => db.close());
+  const service = new CellarService(db), owner = randomUUID(), value = bottle();
+  const created = await service.perform(owner, { operationID: randomUUID(), bottleID: value.id, baseVersion: 0, action: { kind: "create", bottle: value } });
+  const changed = { ...value, note: "Offline edit" };
+  const replaced = await service.perform(owner, { operationID: randomUUID(), bottleID: value.id, baseVersion: created.version, action: { kind: "replace", bottle: changed } });
+  assert.equal(replaced.bottle?.note, "Offline edit");
+  await assert.rejects(() => service.perform(owner, { operationID: randomUUID(), bottleID: value.id, baseVersion: replaced.version, action: { kind: "replace", bottle: { ...changed, wineID: randomUUID() } } }), (e: ServiceError) => e.code === "VALIDATION_ERROR");
+});
+
 test("a pending transaction cannot publish a later cursor", { skip: !process.env.TEST_DATABASE_URL }, async t => {
   const db = await database(); t.after(() => db.close());
   const service = new CellarService(db), owner = randomUUID(), value = bottle();
