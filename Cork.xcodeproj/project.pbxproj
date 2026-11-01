@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0378125F907165D4340D85F9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE464C9C17B2E64C15AC23C1 /* RootView.swift */; };
+		12651373317E8519D8169008 /* CorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71C113F60396A387AFBB59 /* CorkApp.swift */; };
+		333A3DCB7E8B3C7217F13E01 /* WineDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFC1A0453030ED37DC4B2F0 /* WineDomainTests.swift */; };
+		3C8EDCB9B63E126CA4DA6324 /* CellarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BFDDD3D171AB7D6FE6CA0D /* CellarStore.swift */; };
+		401A970C2039555857A6F696 /* CorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C183DE8D3A1CD84D53557F /* CorkUITests.swift */; };
+		467DF6391C6EEE01BB14055D /* VisionAdapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1C51EB9EBEEC8395321C9 /* VisionAdapters.swift */; };
+		6D0212CE1BCF13667461F3F6 /* BottlePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA509804AAF3144FB50AAEEC /* BottlePreviewView.swift */; };
+		A32C82BE3BA81DCE17E2AA80 /* CellarArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A031712D4364F32F68BF70 /* CellarArchive.swift */; };
+		ADE62C0DF6F572E1E2BA0138 /* QuadEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D18CBD0878A61CA158933 /* QuadEditorView.swift */; };
+		B642E73D3A97D5ABB21507F8 /* WineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44FD677A078EAB38F5C0BA /* WineDetailView.swift */; };
+		B671B7F9CE3E25ECC8C990BA /* ImageNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41341A270EB7BC0F2BE219C6 /* ImageNormalizer.swift */; };
+		B673AEED5643D8D884A899D6 /* WineDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2101B2291BF364C3166FD5 /* WineDomain.swift */; };
+		B97F398D32BA3FC20EBA5865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6022FAC6692D49C37206BE51 /* Assets.xcassets */; };
+		CFFF7E9B89B46F40991E6DE9 /* CorkArchiveDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440B795EECAE1D12D9E65EC4 /* CorkArchiveDocument.swift */; };
+		DE18449B728260E608E72A03 /* CellarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A38CFC19C6736B5599AA3FA /* CellarRepository.swift */; };
+		E03EE343B635AC4D803955F9 /* SwiftDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129839B1BDA480ADD2246A68 /* SwiftDataModels.swift */; };
+		EB0459A88218C24B312F2362 /* RecognitionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567C67BA22A9FE892BF87FF /* RecognitionTypes.swift */; };
+		EE67C8B305935938290E5353 /* AddWineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD081CCE2DFBB23D490907C /* AddWineView.swift */; };
+		F035CD292F226870E8E6329F /* TastingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BACBDC39F83C296DDDE642 /* TastingFormView.swift */; };
+		F8549601135BAC54E4868637 /* VisionSubjectPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3D109FA816D0E4EEFEFFD4 /* VisionSubjectPickerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5601E949DC939F3284100764 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3A0F34373AED36013E52A1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD7F2F9E4CBEF4FC9BB05402;
+			remoteInfo = Cork;
+		};
+		CEFC464D157D0B8F233F17F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3A0F34373AED36013E52A1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD7F2F9E4CBEF4FC9BB05402;
+			remoteInfo = Cork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		017D18CBD0878A61CA158933 /* QuadEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadEditorView.swift; sourceTree = "<group>"; };
+		0F2101B2291BF364C3166FD5 /* WineDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDomain.swift; sourceTree = "<group>"; };
+		129839B1BDA480ADD2246A68 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
+		21B4D303025A328D8A5F043B /* Cork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A38CFC19C6736B5599AA3FA /* CellarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarRepository.swift; sourceTree = "<group>"; };
+		41341A270EB7BC0F2BE219C6 /* ImageNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNormalizer.swift; sourceTree = "<group>"; };
+		43A031712D4364F32F68BF70 /* CellarArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarArchive.swift; sourceTree = "<group>"; };
+		440B795EECAE1D12D9E65EC4 /* CorkArchiveDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorkArchiveDocument.swift; sourceTree = "<group>"; };
+		53BFDDD3D171AB7D6FE6CA0D /* CellarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarStore.swift; sourceTree = "<group>"; };
+		6022FAC6692D49C37206BE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		656C934DD64A005182940E25 /* CorkTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EFC1A0453030ED37DC4B2F0 /* WineDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDomainTests.swift; sourceTree = "<group>"; };
+		87C183DE8D3A1CD84D53557F /* CorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorkUITests.swift; sourceTree = "<group>"; };
+		8F3D109FA816D0E4EEFEFFD4 /* VisionSubjectPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionSubjectPickerView.swift; sourceTree = "<group>"; };
+		A567C67BA22A9FE892BF87FF /* RecognitionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionTypes.swift; sourceTree = "<group>"; };
+		AB44FD677A078EAB38F5C0BA /* WineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailView.swift; sourceTree = "<group>"; };
+		D5B1C51EB9EBEEC8395321C9 /* VisionAdapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAdapters.swift; sourceTree = "<group>"; };
+		DA71C113F60396A387AFBB59 /* CorkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorkApp.swift; sourceTree = "<group>"; };
+		E8BACBDC39F83C296DDDE642 /* TastingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingFormView.swift; sourceTree = "<group>"; };
+		ECD081CCE2DFBB23D490907C /* AddWineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWineView.swift; sourceTree = "<group>"; };
+		EE464C9C17B2E64C15AC23C1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F65DEA84423BAEDF3DB0A21D /* CorkUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA509804AAF3144FB50AAEEC /* BottlePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottlePreviewView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		09F389C34E9213B6561D3C25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21B4D303025A328D8A5F043B /* Cork.app */,
+				656C934DD64A005182940E25 /* CorkTests.xctest */,
+				F65DEA84423BAEDF3DB0A21D /* CorkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F50F7021A231BCCF748E797 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				53BFDDD3D171AB7D6FE6CA0D /* CellarStore.swift */,
+				DA71C113F60396A387AFBB59 /* CorkApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		122050875D61CE9F9F927355 = {
+			isa = PBXGroup;
+			children = (
+				2522293D9EE6D06E2AA0046D /* Cork */,
+				B743A800B1B9A32849D75468 /* CorkTests */,
+				5D196566065FAA497A59ED64 /* CorkUITests */,
+				09F389C34E9213B6561D3C25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2522293D9EE6D06E2AA0046D /* Cork */ = {
+			isa = PBXGroup;
+			children = (
+				6022FAC6692D49C37206BE51 /* Assets.xcassets */,
+				0F50F7021A231BCCF748E797 /* App */,
+				B5484E2DE9E739D1D3DAE9CC /* Data */,
+				DDB6147F35853020284BBE97 /* Domain */,
+				96BF66E8E1B808C05D333B48 /* Features */,
+				4226B4288E5C1D3D32EDFC18 /* Media */,
+				882AE1F6FD01EF91E7AD76CC /* Recognition */,
+			);
+			path = Cork;
+			sourceTree = "<group>";
+		};
+		4226B4288E5C1D3D32EDFC18 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				41341A270EB7BC0F2BE219C6 /* ImageNormalizer.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		5D196566065FAA497A59ED64 /* CorkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87C183DE8D3A1CD84D53557F /* CorkUITests.swift */,
+			);
+			path = CorkUITests;
+			sourceTree = "<group>";
+		};
+		882AE1F6FD01EF91E7AD76CC /* Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				A567C67BA22A9FE892BF87FF /* RecognitionTypes.swift */,
+				D5B1C51EB9EBEEC8395321C9 /* VisionAdapters.swift */,
+			);
+			path = Recognition;
+			sourceTree = "<group>";
+		};
+		96BF66E8E1B808C05D333B48 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				ECD081CCE2DFBB23D490907C /* AddWineView.swift */,
+				FA509804AAF3144FB50AAEEC /* BottlePreviewView.swift */,
+				017D18CBD0878A61CA158933 /* QuadEditorView.swift */,
+				EE464C9C17B2E64C15AC23C1 /* RootView.swift */,
+				E8BACBDC39F83C296DDDE642 /* TastingFormView.swift */,
+				8F3D109FA816D0E4EEFEFFD4 /* VisionSubjectPickerView.swift */,
+				AB44FD677A078EAB38F5C0BA /* WineDetailView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B5484E2DE9E739D1D3DAE9CC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				43A031712D4364F32F68BF70 /* CellarArchive.swift */,
+				3A38CFC19C6736B5599AA3FA /* CellarRepository.swift */,
+				440B795EECAE1D12D9E65EC4 /* CorkArchiveDocument.swift */,
+				129839B1BDA480ADD2246A68 /* SwiftDataModels.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B743A800B1B9A32849D75468 /* CorkTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EFC1A0453030ED37DC4B2F0 /* WineDomainTests.swift */,
+			);
+			path = CorkTests;
+			sourceTree = "<group>";
+		};
+		DDB6147F35853020284BBE97 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0F2101B2291BF364C3166FD5 /* WineDomain.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		663079A103AFEA377DDE7083 /* CorkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E91B9401E53EAD04B82CAFC3 /* Build configuration list for PBXNativeTarget "CorkTests" */;
+			buildPhases = (
+				FBA37D702F24A3670CA6136A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B374DA5E51AE76CCF45575B9 /* PBXTargetDependency */,
+			);
+			name = CorkTests;
+			productName = CorkTests;
+			productReference = 656C934DD64A005182940E25 /* CorkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD7F2F9E4CBEF4FC9BB05402 /* Cork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B62F4701F1A988F3B074214 /* Build configuration list for PBXNativeTarget "Cork" */;
+			buildPhases = (
+				7657145742A671647FBCB117 /* Sources */,
+				328977A87915DA0913E90E4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cork;
+			productName = Cork;
+			productReference = 21B4D303025A328D8A5F043B /* Cork.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF72A64878EBB617F5D56036 /* CorkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CDA03DE32FC03BE2ED00F9A /* Build configuration list for PBXNativeTarget "CorkUITests" */;
+			buildPhases = (
+				0640B0AA947CF95E6743A664 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AEF4B6F4461CDDAC42ABCDE /* PBXTargetDependency */,
+			);
+			name = CorkUITests;
+			productName = CorkUITests;
+			productReference = F65DEA84423BAEDF3DB0A21D /* CorkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3A0F34373AED36013E52A1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					663079A103AFEA377DDE7083 = {
+						DevelopmentTeam = "";
+					};
+					EF72A64878EBB617F5D56036 = {
+						DevelopmentTeam = "";
+						TestTargetID = CD7F2F9E4CBEF4FC9BB05402;
+					};
+				};
+			};
+			buildConfigurationList = A4F84CC91E35DEEE41EBBCA2 /* Build configuration list for PBXProject "Cork" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ja;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ja,
+			);
+			mainGroup = 122050875D61CE9F9F927355;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD7F2F9E4CBEF4FC9BB05402 /* Cork */,
+				663079A103AFEA377DDE7083 /* CorkTests */,
+				EF72A64878EBB617F5D56036 /* CorkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		328977A87915DA0913E90E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B97F398D32BA3FC20EBA5865 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0640B0AA947CF95E6743A664 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				401A970C2039555857A6F696 /* CorkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7657145742A671647FBCB117 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE67C8B305935938290E5353 /* AddWineView.swift in Sources */,
+				6D0212CE1BCF13667461F3F6 /* BottlePreviewView.swift in Sources */,
+				A32C82BE3BA81DCE17E2AA80 /* CellarArchive.swift in Sources */,
+				DE18449B728260E608E72A03 /* CellarRepository.swift in Sources */,
+				3C8EDCB9B63E126CA4DA6324 /* CellarStore.swift in Sources */,
+				12651373317E8519D8169008 /* CorkApp.swift in Sources */,
+				CFFF7E9B89B46F40991E6DE9 /* CorkArchiveDocument.swift in Sources */,
+				B671B7F9CE3E25ECC8C990BA /* ImageNormalizer.swift in Sources */,
+				ADE62C0DF6F572E1E2BA0138 /* QuadEditorView.swift in Sources */,
+				EB0459A88218C24B312F2362 /* RecognitionTypes.swift in Sources */,
+				0378125F907165D4340D85F9 /* RootView.swift in Sources */,
+				E03EE343B635AC4D803955F9 /* SwiftDataModels.swift in Sources */,
+				F035CD292F226870E8E6329F /* TastingFormView.swift in Sources */,
+				467DF6391C6EEE01BB14055D /* VisionAdapters.swift in Sources */,
+				F8549601135BAC54E4868637 /* VisionSubjectPickerView.swift in Sources */,
+				B642E73D3A97D5ABB21507F8 /* WineDetailView.swift in Sources */,
+				B673AEED5643D8D884A899D6 /* WineDomain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBA37D702F24A3670CA6136A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				333A3DCB7E8B3C7217F13E01 /* WineDomainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AEF4B6F4461CDDAC42ABCDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD7F2F9E4CBEF4FC9BB05402 /* Cork */;
+			targetProxy = CEFC464D157D0B8F233F17F2 /* PBXContainerItemProxy */;
+		};
+		B374DA5E51AE76CCF45575B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD7F2F9E4CBEF4FC9BB05402 /* Cork */;
+			targetProxy = 5601E949DC939F3284100764 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		356C3CD8C84B1595AAA69990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.cork.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cork;
+			};
+			name = Debug;
+		};
+		59B0448BE753B0DE0DE2256A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = X5LBWH4CYQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Cork;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ワインボトルを撮影して登録するためにカメラを使用します。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ワインボトル写真を選択して登録するために写真ライブラリを使用します。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.cork;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D32271694265625CD678B0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		B2516E00EF14D45493D6A739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.cork.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cork.app/Cork";
+			};
+			name = Debug;
+		};
+		F281E4C58E839284A51F7F6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.cork.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cork.app/Cork";
+			};
+			name = Release;
+		};
+		F4414BF2DFF8486DFB955012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.cork.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cork;
+			};
+			name = Release;
+		};
+		F7391D648BB13FBCB1603C8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = X5LBWH4CYQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Cork;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ワインボトルを撮影して登録するためにカメラを使用します。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ワインボトル写真を選択して登録するために写真ライブラリを使用します。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.cork;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FE6CDAEB7878417C3F38C079 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B62F4701F1A988F3B074214 /* Build configuration list for PBXNativeTarget "Cork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B0448BE753B0DE0DE2256A /* Debug */,
+				F7391D648BB13FBCB1603C8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9CDA03DE32FC03BE2ED00F9A /* Build configuration list for PBXNativeTarget "CorkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356C3CD8C84B1595AAA69990 /* Debug */,
+				F4414BF2DFF8486DFB955012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A4F84CC91E35DEEE41EBBCA2 /* Build configuration list for PBXProject "Cork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6CDAEB7878417C3F38C079 /* Debug */,
+				8D32271694265625CD678B0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E91B9401E53EAD04B82CAFC3 /* Build configuration list for PBXNativeTarget "CorkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2516E00EF14D45493D6A739 /* Debug */,
+				F281E4C58E839284A51F7F6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3A0F34373AED36013E52A1C /* Project object */;
+}
