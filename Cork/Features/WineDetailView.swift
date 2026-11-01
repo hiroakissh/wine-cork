@@ -43,6 +43,7 @@ struct WineDetailView: View {
                     }
                 }
             }
+            .listRowBackground(Color("CellarSurface"))
 
             Section("状態") {
                 Picker("ライフサイクル", selection: $selectedState) {
@@ -58,6 +59,7 @@ struct WineDetailView: View {
                     LabeledContent("残量", value: "\(remaining)%")
                 }
             }
+            .listRowBackground(Color("CellarSurface"))
 
             Section("ワイン情報") {
                 if let region = entry.region { LabeledContent("産地", value: region) }
@@ -68,6 +70,7 @@ struct WineDetailView: View {
                 if let alcohol = entry.alcoholPercent { LabeledContent("アルコール", value: alcohol.formatted(.number.precision(.fractionLength(1))) + "%") }
                 LabeledContent("ボトル形状", value: entry.bottleShape.displayName)
             }
+            .listRowBackground(Color("CellarSurface"))
 
             Section("体験") {
                 LabeledContent("テイスティング", value: "\(entry.tastingCount)件")
@@ -79,6 +82,7 @@ struct WineDetailView: View {
                     Button("料理ペアリング") { showingPairing = true }
                 }
             }
+            .listRowBackground(Color("CellarSurface"))
 
             Section("表示") {
                 NavigationLink {
@@ -93,11 +97,16 @@ struct WineDetailView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
+            .listRowBackground(Color("CellarSurface"))
 
             if let note = entry.note, !note.isEmpty {
                 Section("メモ") { Text(note) }
+                    .listRowBackground(Color("CellarSurface"))
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(Color("CellarBackground"))
+        .tint(Color.accentColor)
         .navigationTitle("Wine Detail")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -150,10 +159,16 @@ struct BottleEditView: View {
     var body: some View {
         NavigationStack {
             Form {
-                TextField("保管場所", text: $storageLocation)
-                TextField("残量（%）", text: $remaining).keyboardType(.numberPad)
-                TextField("メモ", text: $note, axis: .vertical).lineLimit(3...8)
+                Section {
+                    TextField("保管場所", text: $storageLocation)
+                    TextField("残量（%）", text: $remaining).keyboardType(.numberPad)
+                    TextField("メモ", text: $note, axis: .vertical).lineLimit(3...8)
+                }
+                .listRowBackground(Color("CellarSurface"))
             }
+            .scrollContentBackground(.hidden)
+            .background(Color("CellarBackground"))
+            .tint(Color.accentColor)
             .navigationTitle("ボトルを編集")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("キャンセル") { dismiss() } }
@@ -165,5 +180,6 @@ struct BottleEditView: View {
                 }
             }
         }
+        .presentationBackground(Color("CellarBackground"))
     }
 }

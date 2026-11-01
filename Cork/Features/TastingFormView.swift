@@ -23,13 +23,18 @@ struct TastingFormView: View {
                     ScoreStepper(title: "タンニン", value: $tannin)
                     ScoreStepper(title: "ボディ", value: $bodyScore)
                 }
+                .listRowBackground(Color("CellarSurface"))
                 Section("記録") {
                     DatePicker("飲用日時", selection: $tastedAt)
                     TextField("香りタグ（カンマ区切り）", text: $aromaTags)
                     TextField("味わいタグ（カンマ区切り）", text: $palateTags)
                     TextField("ノート", text: $note, axis: .vertical).lineLimit(4...10)
                 }
+                .listRowBackground(Color("CellarSurface"))
             }
+            .scrollContentBackground(.hidden)
+            .background(Color("CellarBackground"))
+            .tint(Color.accentColor)
             .navigationTitle("テイスティング")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -56,6 +61,7 @@ struct TastingFormView: View {
                 }
             }
         }
+        .presentationBackground(Color("CellarBackground"))
     }
 
     private func parseTags(_ text: String) -> [String] {
@@ -83,11 +89,17 @@ struct PairingFormView: View {
     var body: some View {
         NavigationStack {
             Form {
-                TextField("料理名", text: $dishName)
-                TextField("カテゴリ", text: $category)
-                Stepper("相性: \(score) / 5", value: $score, in: 1...5)
-                TextField("メモ", text: $note, axis: .vertical).lineLimit(3...8)
+                Section {
+                    TextField("料理名", text: $dishName)
+                    TextField("カテゴリ", text: $category)
+                    Stepper("相性: \(score) / 5", value: $score, in: 1...5)
+                    TextField("メモ", text: $note, axis: .vertical).lineLimit(3...8)
+                }
+                .listRowBackground(Color("CellarSurface"))
             }
+            .scrollContentBackground(.hidden)
+            .background(Color("CellarBackground"))
+            .tint(Color.accentColor)
             .navigationTitle("料理ペアリング")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -102,6 +114,7 @@ struct PairingFormView: View {
                 }
             }
         }
+        .presentationBackground(Color("CellarBackground"))
     }
 }
 

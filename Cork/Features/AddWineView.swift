@@ -69,7 +69,21 @@ struct AddWineView: View {
                             .frame(maxWidth: .infinity, maxHeight: 220)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                     } else {
-                        ContentUnavailableView("写真は任意です", systemImage: "photo", description: Text("ボトル写真を保存すると、後からラベルを確認できます。"))
+                        VStack(spacing: 12) {
+                            Image(systemName: "wineglass")
+                                .font(.system(size: 28, weight: .light))
+                                .foregroundStyle(Color.accentColor)
+                                .frame(width: 64, height: 64)
+                                .background(Color.accentColor.opacity(0.10), in: RoundedRectangle(cornerRadius: 20))
+                            Text("写真は任意です")
+                                .font(.headline)
+                            Text("ボトル写真を保存すると、後からラベルを確認できます。")
+                                .font(.footnote)
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.center)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 16)
                     }
                     HStack {
                         PhotosPicker(selection: $selectedPhoto, matching: .images) {
@@ -96,7 +110,7 @@ struct AddWineView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(maxWidth: .infinity, maxHeight: 180)
-                                    .background(Color.white)
+                                    .background(Color("CellarBackground"))
                                     .clipShape(RoundedRectangle(cornerRadius: 12))
                             }
                         }
@@ -157,6 +171,7 @@ struct AddWineView: View {
                 } header: {
                     Text("ボトル写真")
                 }
+                .listRowBackground(Color("CellarSurface"))
 
                 Section("基本情報") {
                     TextField("銘柄名（必須）", text: $name)
@@ -180,6 +195,7 @@ struct AddWineView: View {
                         Text("%").foregroundStyle(.secondary)
                     }
                 }
+                .listRowBackground(Color("CellarSurface"))
 
                 Section("ボトル") {
                     Picker("形状", selection: $bottleShape) {
@@ -198,7 +214,11 @@ struct AddWineView: View {
                     TextField("メモ", text: $note, axis: .vertical)
                         .lineLimit(3...6)
                 }
+                .listRowBackground(Color("CellarSurface"))
             }
+            .scrollContentBackground(.hidden)
+            .background(Color("CellarBackground"))
+            .tint(Color.accentColor)
             .navigationTitle("ワインを登録")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -355,6 +375,7 @@ struct AddWineView: View {
                 }
             }
         }
+        .presentationBackground(Color("CellarBackground"))
     }
 
     private func save() {
