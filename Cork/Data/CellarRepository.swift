@@ -33,11 +33,14 @@ enum MediaAssetKind: String, Sendable {
 @MainActor
 final class CellarRepository {
     let context: ModelContext
+    let commitContext: (ModelContext) throws -> Void
     private let fileManager: FileManager
     private let rootURL: URL
 
-    init(context: ModelContext, fileManager: FileManager = .default) {
+    init(context: ModelContext, fileManager: FileManager = .default,
+         commitContext: @escaping (ModelContext) throws -> Void = { try $0.save() }) {
         self.context = context
+        self.commitContext = commitContext
         self.fileManager = fileManager
         self.rootURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
             .appendingPathComponent("Cork", isDirectory: true)
@@ -158,7 +161,7 @@ final class CellarRepository {
             )
             context.insert(bottle)
             context.insert(BottleLifecycleEventRecord(bottleID: bottle.id, from: nil, to: bottleDraft.lifecycleState, occurredAt: now))
-            try context.save()
+            try saveLocalChanges([bottle.id])
             return makeEntry(wine: wine, bottle: bottle)
         } catch {
             context.rollback()
@@ -190,7 +193,7 @@ final class CellarRepository {
         }
         bottle.updatedAt = now
         context.insert(BottleLifecycleEventRecord(bottleID: bottle.id, from: oldState, to: newState, occurredAt: now))
-        try context.save()
+        try saveLocalChanges([bottleID])
     }
 
     func updateBottle(bottleID: UUID, storageLocation: String?, note: String?, remainingPercent: Int?) throws {
@@ -199,7 +202,7 @@ final class CellarRepository {
         bottle.note = note?.nilIfBlank
         bottle.remainingPercent = remainingPercent.map { min(max($0, 0), 100) }
         bottle.updatedAt = .now
-        try context.save()
+        try saveLocalChanges([bottleID])
     }
 
     func addTasting(to bottleID: UUID, draft: TastingDraft) throws {
@@ -208,17 +211,18 @@ final class CellarRepository {
         context.insert(tasting)
         let tastings = try fetchTastings(for: bottleID)
         bottle.tastingCount = tastings.count
-        bottle.lastTastedAt = draft.tastedAt
-        let ratings = tastings.compactMap(\.rating) + (draft.rating.map { [$0] } ?? [])
+        bottle.lastTastedAt = tastings.map(\.tastedAt).max()
+        let ratings = tastings.compactMap(\.rating)
         bottle.ratingSummary = ratings.isEmpty ? nil : Double(ratings.reduce(0, +)) / Double(ratings.count)
         bottle.tags = Array(Set(tastings.flatMap { $0.aromaTags + $0.palateTags } + draft.aromaTags + draft.palateTags)).sorted()
         bottle.updatedAt = .now
-        try context.save()
+        try saveLocalChanges([bottleID])
     }
 
     func addPairing(to bottleID: UUID, draft: PairingDraft) throws {
+        guard try fetchBottle(id: bottleID) != nil else { return }
         context.insert(PairingRecord(bottleID: bottleID, draft: draft))
-        try context.save()
+        try saveLocalChanges([bottleID])
     }
 
     func fetchTastings(for bottleID: UUID? = nil) throws -> [TastingSessionRecord] {
@@ -386,7 +390,7 @@ final class CellarRepository {
                 context.insert(BottleLifecycleEventRecord(id: event.id, bottleID: event.bottleID, from: event.fromState, to: event.toState, occurredAt: event.occurredAt, note: event.note))
                 counts.lifecycleEvents += 1
             }
-            try context.save()
+            try saveLocalChanges(Set(archive.bottles.map(\.id) + archive.tastings.map(\.bottleID) + archive.pairings.map(\.bottleID) + archive.lifecycleEvents.map(\.bottleID)))
         } catch {
             context.rollback()
             for url in writtenMediaURLs { try? fileManager.removeItem(at: url) }
@@ -440,14 +444,12 @@ final class CellarRepository {
     func deleteEntry(bottleID: UUID) throws {
         guard let bottle = try fetchBottle(id: bottleID) else { return }
         let wineID = bottle.wineID
-        if let assetID = bottle.sourceImageAssetID {
-            try deleteMedia(id: assetID)
-        }
-        if let assetID = bottle.labelImageAssetID {
-            try deleteMedia(id: assetID)
-        }
-        if let assetID = bottle.thumbnailAssetID {
-            try deleteMedia(id: assetID)
+        var mediaURLs: [URL] = []
+        for assetID in [bottle.sourceImageAssetID, bottle.labelImageAssetID, bottle.thumbnailAssetID].compactMap({ $0 }) {
+            if let asset = try context.fetch(FetchDescriptor<MediaAssetRecord>(predicate: #Predicate { $0.id == assetID })).first {
+                mediaURLs.append(rootURL.appendingPathComponent(asset.relativePath))
+                context.delete(asset)
+            }
         }
         let tastings = try fetchTastings(for: bottleID)
         for tasting in tastings { context.delete(tasting) }
@@ -463,7 +465,8 @@ final class CellarRepository {
            let wine = try context.fetch(FetchDescriptor<WineRecord>(predicate: #Predicate { $0.id == wineID })).first {
             context.delete(wine)
         }
-        try context.save()
+        try saveLocalChanges([bottleID])
+        for url in mediaURLs { try? fileManager.removeItem(at: url) }
     }
 
     func loadImageData(for assetID: UUID) throws -> Data? {

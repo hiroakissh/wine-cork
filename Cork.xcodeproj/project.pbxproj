@@ -10,13 +10,18 @@
 		0378125F907165D4340D85F9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE464C9C17B2E64C15AC23C1 /* RootView.swift */; };
 		12651373317E8519D8169008 /* CorkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71C113F60396A387AFBB59 /* CorkApp.swift */; };
 		333A3DCB7E8B3C7217F13E01 /* WineDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFC1A0453030ED37DC4B2F0 /* WineDomainTests.swift */; };
+		33682D399CFE63F8E6C502DC /* SyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB29743F3D206E93881669 /* SyncTests.swift */; };
 		33B196651D0C76765B3EAACC /* StoreBootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A8B5D80EA668E24DFCCDB /* StoreBootstrapTests.swift */; };
+		351BB4F3B4845639F1B85FA8 /* SyncClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B238DBAF04071BC5C47A989 /* SyncClient.swift */; };
 		3C8EDCB9B63E126CA4DA6324 /* CellarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BFDDD3D171AB7D6FE6CA0D /* CellarStore.swift */; };
+		3DA3CBBC6AA39A33811E4B5B /* SyncRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE292C215EEDF57BAEFAE689 /* SyncRepository.swift */; };
 		401A970C2039555857A6F696 /* CorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C183DE8D3A1CD84D53557F /* CorkUITests.swift */; };
 		467DF6391C6EEE01BB14055D /* VisionAdapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1C51EB9EBEEC8395321C9 /* VisionAdapters.swift */; };
+		498AF523EE09AA827914A6A7 /* SyncTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085E72916A704D2C10011F74 /* SyncTypes.swift */; };
 		6D0212CE1BCF13667461F3F6 /* BottlePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA509804AAF3144FB50AAEEC /* BottlePreviewView.swift */; };
 		6F7845F124C0BF31CEB006A1 /* StoreBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1138A66E87CA5B8C45A4C879 /* StoreBootstrap.swift */; };
 		A32C82BE3BA81DCE17E2AA80 /* CellarArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A031712D4364F32F68BF70 /* CellarArchive.swift */; };
+		AC7C7D707E00431BA10777D2 /* SyncJournalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F798A2EB432219224F5459C /* SyncJournalRecord.swift */; };
 		ADE62C0DF6F572E1E2BA0138 /* QuadEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D18CBD0878A61CA158933 /* QuadEditorView.swift */; };
 		B642E73D3A97D5ABB21507F8 /* WineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44FD677A078EAB38F5C0BA /* WineDetailView.swift */; };
 		B671B7F9CE3E25ECC8C990BA /* ImageNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41341A270EB7BC0F2BE219C6 /* ImageNormalizer.swift */; };
@@ -28,6 +33,7 @@
 		EB0459A88218C24B312F2362 /* RecognitionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567C67BA22A9FE892BF87FF /* RecognitionTypes.swift */; };
 		EE67C8B305935938290E5353 /* AddWineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD081CCE2DFBB23D490907C /* AddWineView.swift */; };
 		F035CD292F226870E8E6329F /* TastingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BACBDC39F83C296DDDE642 /* TastingFormView.swift */; };
+		F25D5BF10A7B82F82E1ED314 /* SyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670771AF1EAB3625ABCC49F /* SyncCoordinator.swift */; };
 		F6FA6D5030E3D95C4C6EBE5F /* StorageRecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D337E4A190A8F8E5F701C5A5 /* StorageRecoveryView.swift */; };
 		F8549601135BAC54E4868637 /* VisionSubjectPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3D109FA816D0E4EEFEFFD4 /* VisionSubjectPickerView.swift */; };
 /* End PBXBuildFile section */
@@ -51,17 +57,22 @@
 
 /* Begin PBXFileReference section */
 		017D18CBD0878A61CA158933 /* QuadEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadEditorView.swift; sourceTree = "<group>"; };
+		085E72916A704D2C10011F74 /* SyncTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTypes.swift; sourceTree = "<group>"; };
 		0F2101B2291BF364C3166FD5 /* WineDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDomain.swift; sourceTree = "<group>"; };
 		1138A66E87CA5B8C45A4C879 /* StoreBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBootstrap.swift; sourceTree = "<group>"; };
 		129839B1BDA480ADD2246A68 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
 		21B4D303025A328D8A5F043B /* Cork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A38CFC19C6736B5599AA3FA /* CellarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarRepository.swift; sourceTree = "<group>"; };
+		3B238DBAF04071BC5C47A989 /* SyncClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncClient.swift; sourceTree = "<group>"; };
 		41341A270EB7BC0F2BE219C6 /* ImageNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNormalizer.swift; sourceTree = "<group>"; };
 		43A031712D4364F32F68BF70 /* CellarArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarArchive.swift; sourceTree = "<group>"; };
 		440B795EECAE1D12D9E65EC4 /* CorkArchiveDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorkArchiveDocument.swift; sourceTree = "<group>"; };
 		53BFDDD3D171AB7D6FE6CA0D /* CellarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarStore.swift; sourceTree = "<group>"; };
+		5670771AF1EAB3625ABCC49F /* SyncCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncCoordinator.swift; sourceTree = "<group>"; };
+		5F798A2EB432219224F5459C /* SyncJournalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncJournalRecord.swift; sourceTree = "<group>"; };
 		6022FAC6692D49C37206BE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		656C934DD64A005182940E25 /* CorkTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79AB29743F3D206E93881669 /* SyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTests.swift; sourceTree = "<group>"; };
 		7EFC1A0453030ED37DC4B2F0 /* WineDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDomainTests.swift; sourceTree = "<group>"; };
 		87C183DE8D3A1CD84D53557F /* CorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorkUITests.swift; sourceTree = "<group>"; };
 		8F3D109FA816D0E4EEFEFFD4 /* VisionSubjectPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionSubjectPickerView.swift; sourceTree = "<group>"; };
@@ -76,6 +87,7 @@
 		EE464C9C17B2E64C15AC23C1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		F65DEA84423BAEDF3DB0A21D /* CorkUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA509804AAF3144FB50AAEEC /* BottlePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottlePreviewView.swift; sourceTree = "<group>"; };
+		FE292C215EEDF57BAEFAE689 /* SyncRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -119,6 +131,7 @@
 				96BF66E8E1B808C05D333B48 /* Features */,
 				4226B4288E5C1D3D32EDFC18 /* Media */,
 				882AE1F6FD01EF91E7AD76CC /* Recognition */,
+				B0FF52F7180707E9751F1135 /* Sync */,
 			);
 			path = Cork;
 			sourceTree = "<group>";
@@ -163,6 +176,17 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
+		B0FF52F7180707E9751F1135 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				3B238DBAF04071BC5C47A989 /* SyncClient.swift */,
+				5670771AF1EAB3625ABCC49F /* SyncCoordinator.swift */,
+				FE292C215EEDF57BAEFAE689 /* SyncRepository.swift */,
+				085E72916A704D2C10011F74 /* SyncTypes.swift */,
+			);
+			path = Sync;
+			sourceTree = "<group>";
+		};
 		B5484E2DE9E739D1D3DAE9CC /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +194,7 @@
 				3A38CFC19C6736B5599AA3FA /* CellarRepository.swift */,
 				440B795EECAE1D12D9E65EC4 /* CorkArchiveDocument.swift */,
 				129839B1BDA480ADD2246A68 /* SwiftDataModels.swift */,
+				5F798A2EB432219224F5459C /* SyncJournalRecord.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -178,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				D10A8B5D80EA668E24DFCCDB /* StoreBootstrapTests.swift */,
+				79AB29743F3D206E93881669 /* SyncTests.swift */,
 				7EFC1A0453030ED37DC4B2F0 /* WineDomainTests.swift */,
 			);
 			path = CorkTests;
@@ -317,6 +343,11 @@
 				F6FA6D5030E3D95C4C6EBE5F /* StorageRecoveryView.swift in Sources */,
 				6F7845F124C0BF31CEB006A1 /* StoreBootstrap.swift in Sources */,
 				E03EE343B635AC4D803955F9 /* SwiftDataModels.swift in Sources */,
+				351BB4F3B4845639F1B85FA8 /* SyncClient.swift in Sources */,
+				F25D5BF10A7B82F82E1ED314 /* SyncCoordinator.swift in Sources */,
+				AC7C7D707E00431BA10777D2 /* SyncJournalRecord.swift in Sources */,
+				3DA3CBBC6AA39A33811E4B5B /* SyncRepository.swift in Sources */,
+				498AF523EE09AA827914A6A7 /* SyncTypes.swift in Sources */,
 				F035CD292F226870E8E6329F /* TastingFormView.swift in Sources */,
 				467DF6391C6EEE01BB14055D /* VisionAdapters.swift in Sources */,
 				F8549601135BAC54E4868637 /* VisionSubjectPickerView.swift in Sources */,
@@ -330,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33B196651D0C76765B3EAACC /* StoreBootstrapTests.swift in Sources */,
+				33682D399CFE63F8E6C502DC /* SyncTests.swift in Sources */,
 				333A3DCB7E8B3C7217F13E01 /* WineDomainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
