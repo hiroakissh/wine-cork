@@ -334,6 +334,12 @@ final class ProcessingJobRecord {
 }
 
 enum CorkSchema {
+    static let models: [any PersistentModel.Type] = CorkSchemaV2.models
+}
+
+// Existing model definitions remain unchanged; never add V2 models to this list.
+enum CorkSchemaV1: VersionedSchema {
+    static let versionIdentifier = Schema.Version(1, 0, 0)
     static let models: [any PersistentModel.Type] = [
         LocalCellarRecord.self,
         WineRecord.self,
@@ -347,12 +353,12 @@ enum CorkSchema {
     ]
 }
 
-enum CorkSchemaV1: VersionedSchema {
-    static let versionIdentifier = Schema.Version(1, 0, 0)
-    static let models: [any PersistentModel.Type] = CorkSchema.models
+enum CorkSchemaV2: VersionedSchema {
+    static let versionIdentifier = Schema.Version(2, 0, 0)
+    static let models: [any PersistentModel.Type] = CorkSchemaV1.models + [SyncJournalRecord.self]
 }
 
 enum CorkMigrationPlan: SchemaMigrationPlan {
-    static let schemas: [any VersionedSchema.Type] = [CorkSchemaV1.self]
-    static let stages: [MigrationStage] = []
+    static let schemas: [any VersionedSchema.Type] = [CorkSchemaV1.self, CorkSchemaV2.self]
+    static let stages: [MigrationStage] = [.lightweight(fromVersion: CorkSchemaV1.self, toVersion: CorkSchemaV2.self)]
 }
