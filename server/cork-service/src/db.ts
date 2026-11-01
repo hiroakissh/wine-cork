@@ -26,7 +26,7 @@ export class CellarService {
 
   async perform(owner: string, input: unknown, requestIdentity?: unknown): Promise<Change> {
     const operation = operationSchema.parse(input);
-    if ((operation.action.kind === "create" || operation.action.kind === "import") && operation.action.bottle.id !== operation.bottleID)
+    if ("bottle" in operation.action && operation.action.bottle.id !== operation.bottleID)
       throw new ServiceError("VALIDATION_ERROR", 400);
     const hash = createHash("sha256").update(canonical(requestIdentity ?? operation)).digest("hex");
     const client = await this.db.connect();
@@ -61,6 +61,11 @@ export class CellarService {
         if (!current?.bottle) throw new ServiceError("NOT_FOUND", 404, current);
         bottle = structuredClone(current.bottle);
         this.apply(bottle, operation);
+        if (action.kind === "replace") {
+          if (action.bottle.wineID !== bottle.wineID || action.bottle.cellarID !== bottle.cellarID)
+            throw new ServiceError("VALIDATION_ERROR", 400);
+          bottle = action.bottle;
+        }
         if (action.kind === "delete") bottle = null;
         else bottle.updatedAt = new Date().toISOString();
       }

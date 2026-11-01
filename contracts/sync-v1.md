@@ -10,6 +10,7 @@ JSONはcamelCase、日時はタイムゾーン付きISO 8601、IDはUUIDです�
 | --- | --- | --- |
 | create | `bottle` に個別ボトル全体 | 0。既存ID・削除済みIDは拒否 |
 | import | 固定スナップショットの `bottle` | 0。同一内容の既存IDは既存の結果を返す。異なる内容は競合 |
+| replace | iOSで編集した`bottle`全体（画像・価格等を除く） | 直前に確認した値。既存の生存ボトルだけ。wineID・cellarIDの変更は拒否 |
 | patch | `patch: { storageLocation?, note?, remainingPercent? }` | 直前に確認した値 |
 | state | `state`, `eventID`, 任意の`occurredAt` | 直前に確認した値 |
 | tasting | ID付きの`tasting` | 直前に確認した値 |
@@ -17,6 +18,8 @@ JSONはcamelCase、日時はタイムゾーン付きISO 8601、IDはUUIDです�
 | delete | 追加フィールドなし | 直前に確認した値 |
 
 成功は `{ bottleID, version, bottle, cursor }` です。削除時のbottleはnullです。operationIDの再送は同じ内容で行い、version確認より前に保存済みの結果を返します。内容が変われば`OPERATION_ID_REUSED`です。カーソルはセラー内の確定順、versionはそのボトルを最後に更新したログ位置です。
+
+iOSのreplaceは、端末で確定した状態・履歴・記録を同じ更新単位で反映するための同期用操作です。ボトル全体を競合検知し、競合時はユーザーが選ぶまで上書きしません。ChatGPTには用途別の操作ツールを公開し、replaceは公開しません。
 
 `GET /v1/bottles/:id` は同じ形式です。HTTP 409の`VERSION_CONFLICT`には存在する場合`current`を付けます。削除済みIDでは`current.bottle`がnullです。HTTP 400は`VALIDATION_ERROR`、401は`AUTH_REQUIRED`、403は`FORBIDDEN`、404は`NOT_FOUND`です。
 

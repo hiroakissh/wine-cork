@@ -53,6 +53,7 @@ export const patchSchema = z.object({
 }).strict().refine(value => Object.keys(value).length > 0, "No changes supplied");
 export const actionSchema = z.discriminatedUnion("kind", [
   z.object({ kind: z.enum(["create", "import"]), bottle: bottleSchema }).strict(),
+  z.object({ kind: z.literal("replace"), bottle: bottleSchema }).strict(),
   z.object({ kind: z.literal("patch"), patch: patchSchema }).strict(),
   z.object({ kind: z.literal("state"), state: lifecycle, occurredAt: timestamp.optional(), eventID: uuid }).strict(),
   z.object({ kind: z.literal("tasting"), tasting: tastingSchema }).strict(),
