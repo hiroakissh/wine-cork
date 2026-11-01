@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,7 +54,7 @@
 		0F2101B2291BF364C3166FD5 /* WineDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDomain.swift; sourceTree = "<group>"; };
 		1138A66E87CA5B8C45A4C879 /* StoreBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBootstrap.swift; sourceTree = "<group>"; };
 		129839B1BDA480ADD2246A68 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
-		21B4D303025A328D8A5F043B /* Cork.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Cork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21B4D303025A328D8A5F043B /* Cork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A38CFC19C6736B5599AA3FA /* CellarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarRepository.swift; sourceTree = "<group>"; };
 		41341A270EB7BC0F2BE219C6 /* ImageNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNormalizer.swift; sourceTree = "<group>"; };
 		43A031712D4364F32F68BF70 /* CellarArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellarArchive.swift; sourceTree = "<group>"; };
@@ -254,9 +254,6 @@
 					663079A103AFEA377DDE7083 = {
 						DevelopmentTeam = "";
 					};
-					CD7F2F9E4CBEF4FC9BB05402 = {
-						DevelopmentTeam = "";
-					};
 					EF72A64878EBB617F5D56036 = {
 						DevelopmentTeam = "";
 						TestTargetID = CD7F2F9E4CBEF4FC9BB05402;
@@ -376,6 +373,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = X5LBWH4CYQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Cork;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ワインボトルを撮影して登録するためにカメラを使用します。";
@@ -509,6 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = X5LBWH4CYQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Cork;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ワインボトルを撮影して登録するためにカメラを使用します。";
